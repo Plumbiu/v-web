@@ -6,9 +6,9 @@ import type { SfcInfo } from '@vue-online/shared'
 import { vue } from '@codemirror/lang-vue'
 import { Link, Node } from '../types';
 
-const code = ref('')
 const dataJson = await fetch('sfc.json')
 const sfcInfo: SfcInfo = await dataJson.json()
+const code = ref(sfcInfo['App.vue'].__content__)
 
 onMounted(() => {
   const nodes: Node[] = []

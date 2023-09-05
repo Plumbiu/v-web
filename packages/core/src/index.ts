@@ -5,6 +5,7 @@ import { Parser } from 'acorn'
 import tsPlugin from 'acorn-typescript'
 import { simple as walk } from 'acorn-walk'
 import readGlob from 'readdir-glob'
+import { SfcInfo } from 'packages/shared'
 
 const scriptReg = /<script[\s\w="']+>/
 
@@ -34,18 +35,9 @@ function parse(p: string) {
 	return result
 }
 
-type Sfc = Record<
-	string,
-	{
-		__path__: string
-		__content__: string
-		[key: string]: string
-	}
->
-
 export function transform() {
 	return new Promise((resolve) => {
-		const result: Sfc = {}
+		const result: SfcInfo = {}
 		const sfcs = readGlob('.', {
 			pattern: '**/*.vue',
 		})

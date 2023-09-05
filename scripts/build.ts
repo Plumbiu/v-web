@@ -6,17 +6,7 @@ import { build } from 'vite'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
-;(async () => {})()
-
 async function resolveBuild() {
-	await esbuild.build({
-		entryPoints: ['packages/core/index.ts'],
-		outdir: 'packages/core/dist',
-		minify: true,
-		bundle: true,
-		platform: 'node',
-		format: 'esm',
-	})
 	await esbuild.build({
 		entryPoints: ['packages/cli/index.ts'],
 		outdir: 'packages/cli/dist',
