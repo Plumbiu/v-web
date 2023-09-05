@@ -5,7 +5,7 @@
 ## 安装
 
 ```bash
-npm i -g v-web
+npm i -g @plumbiu/v-web
 ```
 
 ## 使用

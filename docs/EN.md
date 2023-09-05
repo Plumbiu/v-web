@@ -5,7 +5,7 @@
 ## Installing
 
 ```bash
-npm i -g v-web
+npm i -g @plumbiu/v-web
 ```
 
 ## useage
