@@ -2,7 +2,7 @@ import * as esbuild from 'esbuild'
 import { copy } from 'fs-extra'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { build } from 'vite'
+// import { build } from 'vite'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
@@ -22,12 +22,12 @@ async function resolveBuild() {
 			`,
 		},
 	})
-	await build({
-		root: path.resolve(__dirname, '../packages/web'),
-		build: {
-			copyPublicDir: false,
-		},
-	})
+	// await build({
+	// 	root: path.resolve(__dirname, '../packages/web'),
+	// 	build: {
+	// 		copyPublicDir: false,
+	// 	},
+	// })
 	await copy(
 		path.resolve(__dirname, '../packages/web/dist'),
 		path.resolve(__dirname, '../packages/cli/dist'),
