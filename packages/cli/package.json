@@ -1,0 +1,41 @@
+{
+	"name": "vue-online",
+	"version": "0.0.1",
+	"description": "",
+	"type": "module",
+	"types": "index.d.ts",
+	"files": [
+		"dist"
+	],
+	"bin": {
+		"vo": "./dist/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Plumbiu/jobs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Plumbiu/jobs/issues"
+	},
+	"homepage": "https://github.com/Plumbiu/jobs#readme",
+	"keywords": [],
+	"author": "Plumbiu",
+	"license": "MIT",
+	"lint-staged": {
+		"*.{js,ts}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git",
+			"useEmoji": true
+		}
+	},
+	"devDependencies": {
+		"@vue-online/core": "workspace:^",
+		"acorn-walk": "^8.2.0",
+		"cac": "^6.7.14"
+	}
+}

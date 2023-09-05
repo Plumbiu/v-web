@@ -1,0 +1,53 @@
+{
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"prepare": "husky install",
+		"dev": "ts-node scripts/dev.ts",
+		"build": "ts-node scripts/build.ts",
+		"commit": "git-cz"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Plumbiu/jobs.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Plumbiu/jobs/issues"
+	},
+	"homepage": "https://github.com/Plumbiu/jobs#readme",
+	"keywords": [],
+	"author": "Plumbiu",
+	"license": "MIT",
+	"devDependencies": {
+		"@commitlint/cli": "^17.6.7",
+		"@commitlint/config-conventional": "^17.6.7",
+		"@types/fs-extra": "^11.0.1",
+		"@types/node": "^20.5.6",
+		"@typescript-eslint/eslint-plugin": "^6.2.1",
+		"@typescript-eslint/parser": "^6.2.1",
+		"commitizen": "^4.3.0",
+		"cz-git": "^1.7.0",
+		"esbuild": "^0.19.2",
+		"eslint": "^8.46.0",
+		"eslint-plugin-prettier": "^5.0.0",
+		"fs-extra": "^11.1.1",
+		"husky": "^8.0.3",
+		"lint-staged": "^13.2.3",
+		"prettier": "^3.0.1",
+		"typescript": "^5.0.2",
+		"vite": "^4.4.5"
+	},
+	"lint-staged": {
+		"*.{js,ts}": [
+			"eslint --fix",
+			"prettier --write"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-git",
+			"useEmoji": true
+		}
+	}
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@vue-online/web",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "echarts": "^5.4.3",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@codemirror/lang-vue": "^0.1.2",
+    "@types/echarts": "^4.9.18",
+    "@vitejs/plugin-vue": "^4.2.3",
+		"@vue-online/shared": "workspace:^",
+    "codemirror": "^6.0.1",
+    "vite-plugin-compression2": "^0.10.4",
+    "vite-plugin-singlefile": "^0.13.5",
+    "vue-codemirror": "^6.1.1"
+  }
+}
