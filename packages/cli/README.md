@@ -1,6 +1,6 @@
 # vue-online
 
-> vue sfc online view with cli tool !
+> vue-sfc online view with cli tool !
 
 ## Installing
 
@@ -13,3 +13,5 @@ npm i -g vue-online
 ```bash
 vo s
 ```
+
+![](https://plumbiu.github.io/blogImg/image-20230905163618794.png)
