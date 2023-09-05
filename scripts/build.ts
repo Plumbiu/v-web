@@ -18,8 +18,7 @@ async function resolveBuild() {
 		banner: {
 			js: `#! /usr/bin/env node
 			import { createRequire as topLevelCreateRequire } from 'module';
-			const require = topLevelCreateRequire(import.meta.url);
-			`,
+			const require = topLevelCreateRequire(import.meta.url);`,
 		},
 	})
 	await build({
