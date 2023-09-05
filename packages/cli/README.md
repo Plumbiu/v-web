@@ -1,24 +1,28 @@
-# vue-online
+# vue-sfc-online
 
-> vue-sfc online view with cli tool !
+> 使用 cli 工具在线开发 vue 组件！
 
-## Installing
+## 安装
 
 ```bash
 npm i -g vue-sfc-online
 ```
 
-## useage
+## 使用
+
+终端输入：
 
 ```bash
 vo s
 ```
 
+你可以在网页的右边写代码，按下 `alt + enter` 会自动同步到对应文件！
+
 ![](https://plumbiu.github.io/blogImg/image-20230905163618794.png)
 
 ## Todo
 
-- [x] online view
-- [ ] websocket
+- [x] 网页展示
+- [x] websocket
 - [ ] vite plugin
 - [ ] support `unplugin-vue-components/vite` ...
