@@ -15,3 +15,9 @@ vo s
 ```
 
 ![](https://plumbiu.github.io/blogImg/image-20230905163618794.png)
+
+## Todo
+
+- [x] online view
+- [ ] websocket
+- [ ] support `unplugin-vue-components/vite` ...
