@@ -1,5 +1,5 @@
 import { cac } from 'cac'
-import { startServer } from '@vue-web/server'
+import { startServer } from '@v-web/server'
 import { logWebStart } from './src/logger.js'
 
 const cli = cac('vw')

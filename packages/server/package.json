@@ -1,5 +1,5 @@
 {
-	"name": "@vue-web/server",
+	"name": "@v-web/server",
 	"version": "0.0.1",
 	"type": "module",
 	"main": "index.ts",
@@ -30,7 +30,7 @@
 		}
 	},
 	"devDependencies": {
-		"@vue-web/core": "workspace:^",
+		"@v-web/core": "workspace:^",
 		"socket.io": "^4.7.2"
 	}
 }

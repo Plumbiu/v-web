@@ -5,7 +5,7 @@
 ## Installing
 
 ```bash
-npm i -g vue-web
+npm i -g v-web
 ```
 
 ## useage

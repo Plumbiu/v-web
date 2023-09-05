@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import echarts from '../echarts/index'
 import { Codemirror } from 'vue-codemirror'
-import type { SfcInfo } from '@vue-web/shared'
+import type { SfcInfo } from '@v-web/shared'
 import { vue } from '@codemirror/lang-vue'
 import { Link, Node } from '../types'
 import Demo from './Demo/index.vue'

@@ -1,11 +1,11 @@
-# vue-web
+# v-web
 
 > 使用 cli 工具在线开发 vue 组件！
 
 ## 安装
 
 ```bash
-npm i -g vue-web
+npm i -g v-web
 ```
 
 ## 使用

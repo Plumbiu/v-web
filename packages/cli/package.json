@@ -1,5 +1,5 @@
 {
-	"name": "vue-web",
+	"name": "v-web",
 	"version": "0.0.2",
 	"description": "",
 	"type": "module",
@@ -34,8 +34,8 @@
 		}
 	},
 	"devDependencies": {
-		"@vue-web/core": "workspace:^",
-		"@vue-web/server": "workspace:^",
+		"@v-web/core": "workspace:^",
+		"@v-web/server": "workspace:^",
 		"acorn-walk": "^8.2.0",
 		"cac": "^6.7.14",
 		"picocolors": "^1.0.0"
