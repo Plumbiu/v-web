@@ -24,5 +24,6 @@ You can code in the left part of web, press `alt + enter`, the content will sync
 
 - [x] online view
 - [x] websocket
+- [ ] create vue component
 - [ ] vite plugin
 - [ ] support `unplugin-vue-components/vite` ...

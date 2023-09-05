@@ -24,5 +24,6 @@ vw s
 
 - [x] 网页展示
 - [x] websocket
+- [ ] 新增组件
 - [ ] vite plugin
 - [ ] support `unplugin-vue-components/vite` ...
