@@ -3,7 +3,7 @@ import { version } from '../package.json'
 
 function logLogo() {
 	console.log(
-		`\n  ${colors.green(colors.bold('VUE-SFC-ONLINE'))}   ${colors.dim(
+		`\n  ${colors.green(colors.bold('vue-web'))}   ${colors.dim(
 			`v${version}`,
 		)}\n`,
 	)

@@ -1,5 +1,5 @@
 {
-  "name": "@vue-sfc-online/web",
+  "name": "@vue-web/web",
   "version": "0.0.1",
   "type": "module",
   "scripts": {
@@ -16,7 +16,7 @@
     "@codemirror/lang-vue": "^0.1.2",
     "@types/echarts": "^4.9.18",
     "@vitejs/plugin-vue": "^4.2.3",
-    "@vue-sfc-online/shared": "workspace:^",
+    "@vue-web/shared": "workspace:^",
     "codemirror": "^6.0.1",
     "vite-plugin-compression2": "^0.10.4",
     "vite-plugin-singlefile": "^0.13.5",

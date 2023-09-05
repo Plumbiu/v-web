@@ -1,5 +1,5 @@
 {
-	"name": "@vue-sfc-online/core",
+	"name": "@vue-web/core",
 	"version": "1.0.0",
 	"description": "",
 	"type": "module",
@@ -21,7 +21,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@types/readdir-glob": "^1.1.1",
-		"@vue-sfc-online/shared": "workspace:^",
+		"@vue-web/shared": "workspace:^",
 		"acorn": "^8.10.0",
 		"acorn-typescript": "^1.4.4",
 		"acorn-walk": "^8.2.0",

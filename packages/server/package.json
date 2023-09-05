@@ -1,5 +1,5 @@
 {
-	"name": "@vue-sfc-online/server",
+	"name": "@vue-web/server",
 	"version": "0.0.1",
 	"type": "module",
 	"main": "index.ts",
@@ -30,7 +30,7 @@
 		}
 	},
 	"devDependencies": {
-		"@vue-sfc-online/core": "workspace:^",
+		"@vue-web/core": "workspace:^",
 		"socket.io": "^4.7.2"
 	}
 }

@@ -1,11 +1,11 @@
-# vue-sfc-online
+# vue-web
 
 > 使用 cli 工具在线开发 vue 组件！
 
 ## 安装
 
 ```bash
-npm i -g vue-sfc-online
+npm i -g vue-web
 ```
 
 ## 使用
