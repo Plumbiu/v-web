@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs'
 import { createServer } from 'node:http'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import { transform } from '@vue-online/core'
+import { transform } from '@vue-sfc-online/core'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 

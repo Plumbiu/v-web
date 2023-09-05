@@ -5,7 +5,7 @@
 ## Installing
 
 ```bash
-npm i -g vue-online
+npm i -g vue-sfc-online
 ```
 
 ## useage
