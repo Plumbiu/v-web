@@ -13,7 +13,7 @@ npm i -g vue-web
 终端输入：
 
 ```bash
-vo s
+vw s
 ```
 
 你可以在网页的右边写代码，按下 `alt + enter` 会自动同步到对应文件！
