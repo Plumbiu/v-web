@@ -5,6 +5,7 @@ import { Codemirror } from 'vue-codemirror'
 import type { SfcInfo, Sfc } from '@v-web/shared'
 import { vue } from '@codemirror/lang-vue'
 import { io } from 'socket.io-client'
+import { oneDark } from '@codemirror/theme-one-dark'
 
 const socket = io('ws://localhost:3003', {
 	transports: ['websocket', 'polling', 'flashsocket'],
@@ -48,11 +49,11 @@ onMounted(() => {
 		<codemirror
 			v-model="code"
 			placeholder="Code goes here..."
-			:style="{ height: '100vh', flex: 1 }"
+			:style="{ height: '100vh', flex: 1, fontSize: '18px' }"
 			:autofocus="true"
 			:indent-with-tab="true"
 			:tab-size="2"
-			:extensions="[vue()]"
+			:extensions="[vue(), oneDark]"
 		/>
 	</div>
 </template>

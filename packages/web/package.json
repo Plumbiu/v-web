@@ -14,9 +14,10 @@
   },
   "devDependencies": {
     "@codemirror/lang-vue": "^0.1.2",
+    "@codemirror/theme-one-dark": "^6.1.2",
     "@types/echarts": "^4.9.18",
-    "@vitejs/plugin-vue": "^4.2.3",
     "@v-web/shared": "workspace:^",
+    "@vitejs/plugin-vue": "^4.2.3",
     "codemirror": "^6.0.1",
     "vite-plugin-compression2": "^0.10.4",
     "vite-plugin-singlefile": "^0.13.5",
