@@ -20,4 +20,5 @@ vo s
 
 - [x] online view
 - [ ] websocket
+- [ ] vite plugin
 - [ ] support `unplugin-vue-components/vite` ...
