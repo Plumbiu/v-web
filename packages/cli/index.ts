@@ -1,12 +1,16 @@
 import { cac } from 'cac'
 import { startServer } from '@v-web/server'
-import { logWebStart } from './src/logger.js'
+import { logWebStart } from '@v-web/shared'
 
 const cli = cac('vw')
 
-cli.command('s').action(async () => {
-	await startServer()
-	logWebStart()
-})
+cli
+	.command('[root]', 'start web server')
+	.alias('server')
+	.alias('s')
+	.action(async () => {
+		await startServer()
+		logWebStart()
+	})
 
 cli.parse()

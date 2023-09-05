@@ -29,5 +29,8 @@
 			"path": "node_modules/cz-git",
 			"useEmoji": true
 		}
+	},
+	"devDependencies": {
+		"picocolors": "^1.0.0"
 	}
 }

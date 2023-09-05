@@ -21,16 +21,10 @@ export async function startServer() {
 	})
 	const io = new Server(server)
 	io.on('connect', (socket) => {
-		socket.on('change', async ({ __path__, __content__, name }) => {
-			try {
-				writeFileSync(__path__, __content__)
-			} catch (err) {
-				/* empty */
-			}
-			sfc[name] = {
-				...sfc[name],
-				__content__,
-			}
+		socket.on('change', async ({ path, content, name }) => {
+			if (!path || !content) return
+			writeFileSync(path, content)
+			sfc[name].__content__ = content
 			socket.emit('refresh', sfc)
 		})
 	})

@@ -36,6 +36,7 @@
 	"devDependencies": {
 		"@v-web/core": "workspace:^",
 		"@v-web/server": "workspace:^",
+		"@v-web/shared": "workspace:^",
 		"acorn-walk": "^8.2.0",
 		"cac": "^6.7.14",
 		"picocolors": "^1.0.0"

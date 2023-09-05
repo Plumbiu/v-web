@@ -11,10 +11,10 @@ async function resolveBuild() {
 		entryPoints: ['packages/cli/index.ts'],
 		outdir: 'packages/cli/dist',
 		bundle: true,
-		minify: true,
 		treeShaking: true,
 		platform: 'node',
 		format: 'esm',
+		metafile: true,
 		banner: {
 			js: `#! /usr/bin/env node
 			import { createRequire as topLevelCreateRequire } from 'module';
