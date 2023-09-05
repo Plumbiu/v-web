@@ -5,10 +5,11 @@ import { Codemirror } from 'vue-codemirror'
 import type { SfcInfo } from '@vue-sfc-online/shared'
 import { vue } from '@codemirror/lang-vue'
 import { Link, Node } from '../types';
+import Demo from './Demo/index.vue'
 
 const dataJson = await fetch('sfc.json')
 const sfcInfo: SfcInfo = await dataJson.json()
-const code = ref(sfcInfo['App.vue'].__content__)
+const code = ref(sfcInfo['App.vue']?.__content__ ?? '')
 
 onMounted(() => {
   const nodes: Node[] = []
@@ -71,6 +72,7 @@ onMounted(() => {
       :extensions="[vue()]"
     />
   </div>
+  <Demo />
 </template>
 
 <style scoped>
