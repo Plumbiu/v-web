@@ -6,15 +6,25 @@ import type { SfcInfo } from '@vue-sfc-online/shared'
 import { vue } from '@codemirror/lang-vue'
 import { Link, Node } from '../types'
 import Demo from './Demo/index.vue'
+import { io } from 'socket.io-client'
+
+const socket = io('ws://localhost:3003', {
+	transports: ['websocket', 'polling', 'flashsocket']
+})
+
+socket.on('refresh', (data: SfcInfo) => {
+	sfcInfo.value = data
+})
 
 const dataJson = await fetch('sfc.json')
-const sfcInfo: SfcInfo = await dataJson.json()
-const code = ref(sfcInfo['App.vue']?.__content__ ?? '')
+const sfcInfo = ref<SfcInfo>(await dataJson.json())
+const code = ref('')
+const info = ref<any>()
 
 onMounted(() => {
 	const nodes: Node[] = []
 	const links: Link[] = []
-	for (const [name, val] of Object.entries(sfcInfo)) {
+	for (const [name, val] of Object.entries(sfcInfo.value)) {
 		nodes.push({
 			name,
 			value: val.__path__,
@@ -50,13 +60,18 @@ onMounted(() => {
 	chart.setOption(options)
 	chart.on('click', (params: any) => {
 		const { data } = params
-		code.value = sfcInfo[data.name].__content__
+		code.value = sfcInfo.value[data.name].__content__
+		info.value = sfcInfo.value[data.name]
 	})
 })
+
+function handleUpdate() {
+	socket.emit('change', { ...info.value, __content__: code.value} )
+}
 </script>
 
 <template>
-	<div style="display: flex">
+	<div style="display: flex" @keyup.alt.enter="handleUpdate">
 		<div id="chart" style="height: 100vh; width: 50%" />
 		<codemirror
 			v-model="code"

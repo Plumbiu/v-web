@@ -30,6 +30,7 @@
 		}
 	},
 	"devDependencies": {
-		"@vue-sfc-online/core": "workspace:^"
+		"@vue-sfc-online/core": "workspace:^",
+		"socket.io": "^4.7.2"
 	}
 }
