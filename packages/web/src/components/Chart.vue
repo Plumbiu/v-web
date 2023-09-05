@@ -18,6 +18,7 @@ socket.on('refresh', (data: SfcInfo) => {
 
 const dataJson = await fetch('sfc.json')
 const sfcInfo = ref<SfcInfo>(await dataJson.json())
+const sfcName = ref('')
 const code = ref('')
 const info = ref<any>()
 
@@ -60,13 +61,14 @@ onMounted(() => {
 	chart.setOption(options)
 	chart.on('click', (params: any) => {
 		const { data } = params
+		sfcName.value = data.name
 		code.value = sfcInfo.value[data.name].__content__
 		info.value = sfcInfo.value[data.name]
 	})
 })
 
 function handleUpdate() {
-	socket.emit('change', { ...info.value, __content__: code.value} )
+	socket.emit('change', { ...info.value, __content__: code.value, name: sfcName.value } )
 }
 </script>
 

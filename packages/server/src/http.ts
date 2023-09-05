@@ -10,7 +10,7 @@ const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 export async function startServer() {
 	const html = readFileSync(path.resolve(__dirname, './index.html.br'))
-	let sfc = await transform()
+	const sfc = await transform()
 	const server = createServer((req, res) => {
 		if (req.url === '/') {
 			res.setHeader('content-encoding', 'br')
@@ -21,13 +21,16 @@ export async function startServer() {
 	})
 	const io = new Server(server)
 	io.on('connect', (socket) => {
-		socket.on('change', async ({ __path__, __content__ }) => {
+		socket.on('change', async ({ __path__, __content__, name }) => {
 			try {
 				writeFileSync(__path__, __content__)
 			} catch (err) {
 				/* empty */
 			}
-			sfc = await transform()
+			sfc[name] = {
+				...sfc[name],
+				__content__,
+			}
 			socket.emit('refresh', sfc)
 		})
 	})

@@ -4,7 +4,7 @@ import { SfcInfo } from 'packages/shared'
 import { formatName } from './utils/index.js'
 import { parse } from './utils/parse.js'
 
-export function transform() {
+export function transform(): Promise<SfcInfo> {
 	return new Promise((resolve) => {
 		const result: SfcInfo = {}
 		const sfcs = readGlob('.', {
