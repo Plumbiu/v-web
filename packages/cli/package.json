@@ -35,6 +35,7 @@
 	},
 	"devDependencies": {
 		"@vue-sfc-online/core": "workspace:^",
+		"@vue-sfc-online/server": "workspace:^",
 		"acorn-walk": "^8.2.0",
 		"cac": "^6.7.14",
 		"picocolors": "^1.0.0"

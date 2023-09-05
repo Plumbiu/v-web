@@ -1,7 +1,6 @@
 {
 	"name": "@vue-sfc-online/server",
 	"version": "0.0.1",
-	"description": "",
 	"type": "module",
 	"main": "index.ts",
 	"repository": {
@@ -29,5 +28,8 @@
 			"path": "node_modules/cz-git",
 			"useEmoji": true
 		}
+	},
+	"devDependencies": {
+		"@vue-sfc-online/core": "workspace:^"
 	}
 }
