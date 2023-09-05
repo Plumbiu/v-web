@@ -10,12 +10,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Plumbiu/jobs.git"
+		"url": "git+https://github.com/Plumbiu/vue-online.git"
 	},
 	"bugs": {
-		"url": "https://github.com/Plumbiu/jobs/issues"
+		"url": "https://github.com/Plumbiu/vue-online/issues"
 	},
-	"homepage": "https://github.com/Plumbiu/jobs#readme",
+	"homepage": "https://github.com/Plumbiu/vue-online#readme",
 	"keywords": [],
 	"author": "Plumbiu",
 	"license": "MIT",
