@@ -1,6 +1,6 @@
 {
 	"name": "@plumbiu/v-web",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "",
 	"type": "module",
 	"types": "index.d.ts",
