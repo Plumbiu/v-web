@@ -10,6 +10,7 @@ async function resolveBuild() {
 	await esbuild.build({
 		entryPoints: ['packages/cli/index.ts'],
 		outdir: 'packages/cli/dist',
+		minify: true,
 		bundle: true,
 		treeShaking: true,
 		platform: 'node',

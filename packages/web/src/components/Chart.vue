@@ -4,30 +4,30 @@ import echarts, { options } from '../echarts/index'
 import { Codemirror } from 'vue-codemirror'
 import type { SfcInfo, Sfc } from '@v-web/shared'
 import { vue } from '@codemirror/lang-vue'
-import { io } from 'socket.io-client'
 import { oneDark } from '@codemirror/theme-one-dark'
-
-const socket = io('ws://localhost:3003', {
-	transports: ['websocket', 'polling', 'flashsocket'],
-})
-
-socket.on('refresh', (data: SfcInfo) => {
-	sfcInfo.value = data
-})
 
 const dataJson = await fetch('sfc.json')
 const sfcInfo = ref<SfcInfo>(await dataJson.json())
 const code = ref('')
 let info: Partial<Sfc> = {}
 let sfcName = ''
+const ws = new WebSocket('ws://localhost:3003')
+
+ws.onmessage = (e) => {
+	const { type, sfc } = e.data
+	if (type === 'refresh') {
+		sfcInfo.value = sfc
+	}
+}
 
 function handleUpdate() {
 	if (info) {
-		socket.emit('change', {
+		ws.send(JSON.stringify({
+			type: 'change',
 			path: info.__path__,
 			content: code.value,
 			name: sfcName,
-		})
+		}))
 	}
 }
 
@@ -57,5 +57,3 @@ onMounted(() => {
 		/>
 	</div>
 </template>
-
-<style scoped></style>
