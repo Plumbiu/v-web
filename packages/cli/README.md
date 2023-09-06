@@ -18,7 +18,7 @@ vw s
 
 你可以在网页的右边写代码，按下 `alt + enter` 会自动同步到对应文件！
 
-![](https://plumbiu.github.io/blogImg/image-20230905163618794.png)
+![](https://plumbiu.github.io/blogImg/image-20230906190331744.png)
 
 ## Todo
 
