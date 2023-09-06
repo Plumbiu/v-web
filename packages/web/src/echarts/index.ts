@@ -2,13 +2,13 @@ import * as echarts from 'echarts/core'
 import { GraphChart } from 'echarts/charts'
 import { CanvasRenderer } from 'echarts/renderers'
 import type { Link, Node } from '../types'
-import type { SfcInfo } from '@v-web/shared'
+import type { Sfcs } from '@v-web/shared'
 
 echarts.use([GraphChart, CanvasRenderer])
 
 export default echarts
 
-export function options(sfcInfo: SfcInfo) {
+export function options(sfcInfo: Sfcs) {
 	const nodes: Node[] = []
 	const links: Link[] = []
 	for (const [name, val] of Object.entries(sfcInfo)) {

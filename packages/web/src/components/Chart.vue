@@ -2,12 +2,12 @@
 import { onMounted, ref } from 'vue'
 import echarts, { options } from '../echarts/index'
 import { Codemirror } from 'vue-codemirror'
-import type { SfcInfo, Sfc } from '@v-web/shared'
+import type { Sfcs, Sfc } from '@v-web/shared'
 import { vue } from '@codemirror/lang-vue'
 import { oneDark } from '@codemirror/theme-one-dark'
 
 const dataJson = await fetch('sfc.json')
-const sfcInfo = ref<SfcInfo>(await dataJson.json())
+const sfcInfo = ref<Sfcs>(await dataJson.json())
 const code = ref('')
 let info: Partial<Sfc> = {}
 let sfcName = ''

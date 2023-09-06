@@ -1,12 +1,12 @@
 import { readFileSync } from 'node:fs'
 import readGlob from 'readdir-glob'
-import { SfcInfo } from 'packages/shared'
+import { Sfcs } from 'packages/shared'
 import { formatName } from './utils/index.js'
 import { parse } from './utils/parse.js'
 
-export function transform(): Promise<SfcInfo> {
+export function transform(): Promise<Sfcs> {
 	return new Promise((resolve) => {
-		const result: SfcInfo = {}
+		const result: Sfcs = {}
 		const sfcs = readGlob('.', {
 			pattern: '**/*.vue',
 			skip: 'node_modules',

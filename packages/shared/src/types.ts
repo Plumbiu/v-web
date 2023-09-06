@@ -4,4 +4,4 @@ export interface Sfc {
 	[key: string]: string
 }
 
-export type SfcInfo = Record<string, Sfc>
+export type Sfcs = Record<string, Sfc>

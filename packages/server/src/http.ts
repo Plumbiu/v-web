@@ -8,6 +8,17 @@ import { WebSocketServer } from 'ws'
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
+interface ClientChangeMessage extends ClientMessage {
+	type: 'change'
+	path: string
+	content: string
+	name: string
+}
+
+interface ClientMessage {
+	type: string
+}
+
 export async function startServer() {
 	const html = readFileSync(path.resolve(__dirname, './index.html.br'))
 	const sfc = await transform()
@@ -24,8 +35,8 @@ export async function startServer() {
 		console.log('connect')
 		ws.send('world')
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
-		ws.on('message', (e: any) => {
-			const data = JSON.parse(e.toString())
+		ws.on('message', (e: Buffer) => {
+			const data: ClientChangeMessage = JSON.parse(e.toString())
 			const { type, path, content, name } = data
 			if (type === 'change') {
 				writeFileSync(path, content)
