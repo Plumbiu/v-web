@@ -21,7 +21,6 @@ export function transform(): Promise<Sfcs> {
 		})
 		sfcs.on('end', () => {
 			parse(result)
-			console.log(result)
 			resolve(result)
 		})
 	})

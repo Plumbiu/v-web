@@ -1,5 +1,5 @@
 import colors from 'picocolors'
-import { version } from '../package.json'
+import { version } from '../../cli/package.json'
 
 function logLogo() {
 	console.log(

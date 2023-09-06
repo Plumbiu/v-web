@@ -13,7 +13,6 @@ export function parse(result: Sfcs) {
 		}
 		let m
 		while ((m = vueImportReg.exec(script))) {
-			console.log(m)
 			result[root][m[0]] = result[m[0]]?.__path__
 		}
 	}
