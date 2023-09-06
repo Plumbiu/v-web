@@ -20,4 +20,4 @@ async function createViteServer() {
 	server.printUrls()
 }
 
-createViteServer()
+await createViteServer()

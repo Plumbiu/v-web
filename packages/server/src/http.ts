@@ -32,12 +32,10 @@ export async function startServer() {
 	})
 	const wss = new WebSocketServer({ server })
 	wss.on('connection', (ws) => {
-		console.log('connect')
-		ws.send('world')
-		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		ws.on('message', (e: Buffer) => {
 			const data: ClientChangeMessage = JSON.parse(e.toString())
 			const { type, path, content, name } = data
+			if (!path || !content || !name || !type) return
 			if (type === 'change') {
 				writeFileSync(path, content)
 				sfc[name].__content__ = content

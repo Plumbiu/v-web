@@ -1,13 +1,12 @@
 <script setup lang="ts">
-import Chart from './components/Chart.vue'
+import Chart from './pages/Chart.vue'
 </script>
 
 <template>
-  <Suspense>
-    <Chart />
-  </Suspense>
+	<Suspense>
+		<Chart />
+	</Suspense>
 </template>
 
-<style scoped>
+<style scoped></style>
 
-</style>
